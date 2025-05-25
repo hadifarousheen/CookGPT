@@ -1,7 +1,7 @@
 import ReactDOM from "react-dom/client";
 import Login from "./Components/Login";
 import Body from "./Components/Body";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Recipe from "./Components/Recipe";
 import GptSearch from "./Components/GptSearch";
 import appStore from "./utils/appStore";
@@ -37,8 +37,8 @@ const App = () => {
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Provider store={appStore}>
-    <BrowserRouter>
+    <HashRouter>
       <App />
-    </BrowserRouter>
+    </HashRouter>
   </Provider>
 );
