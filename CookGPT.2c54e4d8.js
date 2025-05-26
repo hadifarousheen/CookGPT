@@ -803,7 +803,7 @@ _c = App;
 const root = (0, _clientDefault.default).createRoot(document.getElementById("root"));
 root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRedux.Provider), {
     store: (0, _appStoreDefault.default),
-    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.BrowserRouter), {
+    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.HashRouter), {
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(App, {}, void 0, false, {
             fileName: "src/App.js",
             lineNumber: 41,
@@ -52235,6 +52235,7 @@ const Header = ()=>{
     const navigate = (0, _reactRouterDom.useNavigate)();
     const auth = (0, _auth.getAuth)();
     const dispatch = (0, _reactRedux.useDispatch)();
+    const [showhome, setshowhome] = (0, _react.useState)(false);
     const handlesignout = ()=>{
         (0, _auth.signOut)(auth).then(()=>{
             navigate("/");
@@ -52250,16 +52251,17 @@ const Header = ()=>{
                     children: "CookGPT"
                 }, void 0, false, {
                     fileName: "src/Components/Header.js",
-                    lineNumber: 25,
+                    lineNumber: 26,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                     className: "ml-auto my-auto text-2xl mx-2 ",
                     children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                        showhome && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                             to: "/body",
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                                 onClick: ()=>{
+                                    setshowhome(false);
                                     dispatch((0, _resultSlice.clearResult)());
                                     dispatch((0, _completedataSlice.removeResultInfo)());
                                 },
@@ -52267,30 +52269,33 @@ const Header = ()=>{
                                 children: "Home"
                             }, void 0, false, {
                                 fileName: "src/Components/Header.js",
-                                lineNumber: 28,
+                                lineNumber: 30,
                                 columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/Components/Header.js",
-                            lineNumber: 27,
-                            columnNumber: 11
+                            lineNumber: 29,
+                            columnNumber: 24
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                             to: "gptsearch",
                             children: [
                                 " ",
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                    onClick: ()=>{
+                                        setshowhome(true);
+                                    },
                                     className: "mx-3 bg-red-800 p-2 rounded-lg shadow-md  ",
                                     children: "GPT Search"
                                 }, void 0, false, {
                                     fileName: "src/Components/Header.js",
-                                    lineNumber: 41,
+                                    lineNumber: 45,
                                     columnNumber: 13
                                 }, undefined)
                             ]
                         }, void 0, true, {
                             fileName: "src/Components/Header.js",
-                            lineNumber: 39,
+                            lineNumber: 43,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -52303,28 +52308,28 @@ const Header = ()=>{
                             children: "Sign Out"
                         }, void 0, false, {
                             fileName: "src/Components/Header.js",
-                            lineNumber: 49,
+                            lineNumber: 55,
                             columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/Components/Header.js",
-                    lineNumber: 26,
+                    lineNumber: 27,
                     columnNumber: 9
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/Components/Header.js",
-            lineNumber: 24,
+            lineNumber: 25,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/Components/Header.js",
-        lineNumber: 23,
+        lineNumber: 24,
         columnNumber: 5
     }, undefined);
 };
-_s(Header, "ZaVe+Vo7W9FMoQ/aTgBrV7UvA04=", false, function() {
+_s(Header, "LqXqSi5qXNzUveu97Qt1g28ByaE=", false, function() {
     return [
         (0, _reactRouterDom.useNavigate),
         (0, _reactRedux.useDispatch)
@@ -52354,7 +52359,10 @@ const resultSlice = (0, _toolkit.createSlice)({
     },
     reducers: {
         addResult: (state, action)=>{
-            return action.payload;
+            return {
+                ...state,
+                searchResult: action.payload
+            };
         },
         clearResult: ()=>{
             return [];
@@ -56600,7 +56608,7 @@ const GptSearchBar = ()=>{
     const [text, settext] = (0, _react.useState)("");
     const [result, setresult] = (0, _react.useState)();
     const groq = new (0, _groqSdkDefault.default)({
-        apiKey: "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",
+        apiKey: "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",
         dangerouslyAllowBrowser: true
     });
     const completedata = async (dish)=>{
@@ -56610,6 +56618,8 @@ const GptSearchBar = ()=>{
         return json.meals;
     };
     const handleclick = async ()=>{
+        dispatch((0, _resultSlice.clearResult)());
+        dispatch((0, _completedataSlice.removeResultInfo)());
         const completion = await groq.chat.completions.create({
             messages: [
                 {
@@ -56619,6 +56629,7 @@ const GptSearchBar = ()=>{
             ],
             model: "llama-3.3-70b-versatile"
         }).then(async (chatCompletion)=>{
+            if (chatCompletion.choices[0]?.message?.content.length == 0) return;
             setresult(chatCompletion.choices[0]?.message?.content);
             const messageContent = chatCompletion.choices[0]?.message?.content ?? "";
             const arraydata = messageContent.split(",");
@@ -56645,7 +56656,7 @@ const GptSearchBar = ()=>{
                     }
                 }, void 0, false, {
                     fileName: "src/Components/GptSearchBar.js",
-                    lineNumber: 67,
+                    lineNumber: 71,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -56654,18 +56665,18 @@ const GptSearchBar = ()=>{
                     children: "Search"
                 }, void 0, false, {
                     fileName: "src/Components/GptSearchBar.js",
-                    lineNumber: 76,
+                    lineNumber: 80,
                     columnNumber: 9
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/Components/GptSearchBar.js",
-            lineNumber: 62,
+            lineNumber: 66,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/Components/GptSearchBar.js",
-        lineNumber: 61,
+        lineNumber: 65,
         columnNumber: 5
     }, undefined);
 };
