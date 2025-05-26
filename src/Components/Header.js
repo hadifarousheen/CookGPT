@@ -9,6 +9,7 @@ const Header = () => {
   const navigate = useNavigate();
   const auth = getAuth();
   const dispatch = useDispatch();
+  const[showhome,setshowhome]=useState(false);
   const handlesignout = () => {
     signOut(auth)
       .then(() => {
@@ -24,9 +25,11 @@ const Header = () => {
       <nav className="flex a">
         <h1 className="text-3xl my-auto font-bold ml-3">CookGPT</h1>
         <div className="ml-auto my-auto text-2xl mx-2 ">
-          <Link to="/body">
+         {
+          showhome &&  <Link to="/body">
             <button
               onClick={() => {
+                setshowhome(false);
                 dispatch(clearResult());
                 dispatch(removeResultInfo());
               }}
@@ -35,11 +38,14 @@ const Header = () => {
               Home
             </button>
           </Link>
+         }
 
           <Link to="gptsearch">
             {" "}
             <button
-              
+              onClick={()=>{
+                setshowhome(true);
+              }}
               className="mx-3 bg-red-800 p-2 rounded-lg shadow-md  "
             >
               GPT Search

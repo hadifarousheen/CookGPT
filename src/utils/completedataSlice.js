@@ -7,7 +7,8 @@ const completedataSlice = createSlice({
   },
   reducers: {
     addResultInfo: (state, action) => {
-      state.searchResultInfo = [...state.searchResultInfo, ...action.payload];
+      
+     state.searchResultInfo = [...state.searchResultInfo, ...action.payload];
     },
     removeResultInfo: () => {
       return { searchResultInfo: [] };

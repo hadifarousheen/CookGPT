@@ -1,15 +1,15 @@
 import { useState } from "react";
 import Groq from "groq-sdk";
 import { useDispatch, useSelector } from "react-redux";
-import { addResult } from "../utils/resultSlice";
-import { addResultInfo } from "../utils/completedataSlice";
+import { addResult, clearResult } from "../utils/resultSlice";
+import { addResultInfo, removeResultInfo } from "../utils/completedataSlice";
 
 const GptSearchBar = () => {
   const dispatch = useDispatch();
   const [text, settext] = useState("");
   const [result, setresult] = useState();
   const groq = new Groq({
-    apiKey: "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",
+    apiKey:process.env.REACT_APP_KEY,
     dangerouslyAllowBrowser: true,
   });
   const completedata = async (dish) => {
@@ -27,6 +27,8 @@ const GptSearchBar = () => {
   };
 
   const handleclick = async () => {
+    dispatch(clearResult());
+    dispatch(removeResultInfo())
     const completion = await groq.chat.completions
       .create({
         messages: [
@@ -38,6 +40,8 @@ const GptSearchBar = () => {
         model: "llama-3.3-70b-versatile",
       })
       .then(async (chatCompletion) => {
+        if(chatCompletion.choices[0]?.message?.content.length==0)
+          return;
         setresult(chatCompletion.choices[0]?.message?.content);
         const messageContent =
           chatCompletion.choices[0]?.message?.content ?? "";

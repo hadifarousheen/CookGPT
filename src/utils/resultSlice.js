@@ -6,9 +6,11 @@ export const resultSlice = createSlice({
     searchResult: [],
   },
   reducers: {
-    addResult: (state, action) => {
-      return action.payload;
-    },
+    addResult: (state, action) =>{return {
+    ...state,
+    searchResult: action.payload, 
+    }
+  },
     clearResult: () => {
       return [];
     },
