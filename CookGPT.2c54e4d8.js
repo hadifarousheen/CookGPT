@@ -25111,7 +25111,7 @@ const Login = ()=>{
         });
     };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "relative  ",
+        className: "relative   ",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "absolute",
@@ -25121,114 +25121,120 @@ const Login = ()=>{
                     alt: "food-image"
                 }, void 0, false, {
                     fileName: "src/Components/Login.js",
-                    lineNumber: 53,
+                    lineNumber: 52,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/Components/Login.js",
-                lineNumber: 52,
+                lineNumber: 51,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "  absolute mt-[25%] md:mt-[10%] ml-[30%] border border-black rounded-4xl p-8 text-white bg-black opacity-75 w-1/2 md:w-2/6  ",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                        className: "text-3xl py-2 my-2 font-bold",
-                        children: signin ? "Sign In" : "Sign Up"
-                    }, void 0, false, {
-                        fileName: "src/Components/Login.js",
-                        lineNumber: 60,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("form", {
-                        className: "text-2xl",
-                        onSubmit: (e)=>{
-                            e.preventDefault();
-                        },
-                        children: [
-                            !signin && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                children: [
-                                    "Name",
-                                    " ",
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                                        ref: name,
-                                        className: "bg-gray-500 my-3 w-full  ",
-                                        type: "text"
-                                    }, void 0, false, {
-                                        fileName: "src/Components/Login.js",
-                                        lineNumber: 72,
-                                        columnNumber: 15
-                                    }, undefined)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/Components/Login.js",
-                                lineNumber: 70,
-                                columnNumber: 13
-                            }, undefined),
-                            "Email",
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                                ref: email,
-                                className: "bg-gray-500 my-3 w-full",
-                                type: "email"
-                            }, void 0, false, {
-                                fileName: "src/Components/Login.js",
-                                lineNumber: 80,
-                                columnNumber: 11
-                            }, undefined),
-                            "Password",
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                                ref: password,
-                                className: "bg-gray-500 my-3 w-full",
-                                type: "password"
-                            }, void 0, false, {
-                                fileName: "src/Components/Login.js",
-                                lineNumber: 82,
-                                columnNumber: 11
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                className: "text-md text-red-600",
-                                children: errormessage
-                            }, void 0, false, {
-                                fileName: "src/Components/Login.js",
-                                lineNumber: 87,
-                                columnNumber: 11
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                onClick: handleclick,
-                                className: "bg-red-900 w-full my-4 p-1.5 opacity-100 font-bold cursor-pointer",
-                                children: signin ? "Sign In" : "Sign Up"
-                            }, void 0, false, {
-                                fileName: "src/Components/Login.js",
-                                lineNumber: 88,
-                                columnNumber: 11
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/Components/Login.js",
-                        lineNumber: 63,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                        onClick: ()=>{
-                            setsignin(!signin);
-                        },
-                        className: "text-yellow-400",
-                        children: signin ? "New User? Sign Up" : "Already Signed In?"
-                    }, void 0, false, {
-                        fileName: "src/Components/Login.js",
-                        lineNumber: 95,
-                        columnNumber: 9
-                    }, undefined)
-                ]
-            }, void 0, true, {
+                className: "flex items-center justify-center h-screen",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "absolute   border border-black rounded-4xl p-8 text-white bg-black opacity-75   justify-center  md:w-2/6  ",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                            className: "text-3xl py-2 my-2 font-bold",
+                            children: signin ? "Sign In" : "Sign Up"
+                        }, void 0, false, {
+                            fileName: "src/Components/Login.js",
+                            lineNumber: 60,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("form", {
+                            className: "text-2xl",
+                            onSubmit: (e)=>{
+                                e.preventDefault();
+                            },
+                            children: [
+                                !signin && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    children: [
+                                        "Name",
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                            ref: name,
+                                            className: "bg-gray-500 my-3 w-full   ",
+                                            type: "text"
+                                        }, void 0, false, {
+                                            fileName: "src/Components/Login.js",
+                                            lineNumber: 72,
+                                            columnNumber: 17
+                                        }, undefined)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/Components/Login.js",
+                                    lineNumber: 70,
+                                    columnNumber: 15
+                                }, undefined),
+                                "Email",
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                    ref: email,
+                                    className: "bg-gray-500 my-3 w-full",
+                                    type: "email"
+                                }, void 0, false, {
+                                    fileName: "src/Components/Login.js",
+                                    lineNumber: 80,
+                                    columnNumber: 13
+                                }, undefined),
+                                "Password",
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                    ref: password,
+                                    className: "bg-gray-500 my-3 w-full",
+                                    type: "password"
+                                }, void 0, false, {
+                                    fileName: "src/Components/Login.js",
+                                    lineNumber: 86,
+                                    columnNumber: 13
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                    className: "text-md text-red-600",
+                                    children: errormessage
+                                }, void 0, false, {
+                                    fileName: "src/Components/Login.js",
+                                    lineNumber: 91,
+                                    columnNumber: 13
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                    onClick: handleclick,
+                                    className: "bg-red-900 w-full my-4 p-1.5 opacity-100 font-bold cursor-pointer",
+                                    children: signin ? "Sign In" : "Sign Up"
+                                }, void 0, false, {
+                                    fileName: "src/Components/Login.js",
+                                    lineNumber: 92,
+                                    columnNumber: 13
+                                }, undefined)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/Components/Login.js",
+                            lineNumber: 63,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                            onClick: ()=>{
+                                setsignin(!signin);
+                            },
+                            className: "text-yellow-400",
+                            children: signin ? "New User? Sign Up" : "Already Signed In?"
+                        }, void 0, false, {
+                            fileName: "src/Components/Login.js",
+                            lineNumber: 99,
+                            columnNumber: 11
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/Components/Login.js",
+                    lineNumber: 59,
+                    columnNumber: 9
+                }, undefined)
+            }, void 0, false, {
                 fileName: "src/Components/Login.js",
-                lineNumber: 59,
+                lineNumber: 58,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/Components/Login.js",
-        lineNumber: 51,
+        lineNumber: 50,
         columnNumber: 5
     }, undefined);
 };
@@ -52242,12 +52248,12 @@ const Header = ()=>{
         }).catch((error)=>{});
     };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "bg-black p-3 text-white  opacity-95 fixed z-40 w-full",
+        className: "bg-black p-1.5 md:p-3 text-white  opacity-95 fixed z-40 w-full",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("nav", {
-            className: "flex a",
+            className: "flex  ",
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                    className: "text-3xl my-auto font-bold ml-3",
+                    className: " text-xl md:text-3xl my-auto font-bold md:ml-3",
                     children: "CookGPT"
                 }, void 0, false, {
                     fileName: "src/Components/Header.js",
@@ -52255,7 +52261,7 @@ const Header = ()=>{
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "ml-auto my-auto text-2xl mx-2 ",
+                    className: "ml-auto my-auto md:ml-auto  md:text-2xl  md:mx-2 ",
                     children: [
                         showhome && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                             to: "/body",
@@ -52265,7 +52271,7 @@ const Header = ()=>{
                                     dispatch((0, _resultSlice.clearResult)());
                                     dispatch((0, _completedataSlice.removeResultInfo)());
                                 },
-                                className: "mx-3 bg-red-800 p-2 rounded-lg shadow-md ",
+                                className: " mx-0.5 md:mx-3 bg-red-800 p-1 md:p-2 rounded-lg shadow-md hover:bg-red-400 ",
                                 children: "Home"
                             }, void 0, false, {
                                 fileName: "src/Components/Header.js",
@@ -52285,7 +52291,7 @@ const Header = ()=>{
                                     onClick: ()=>{
                                         setshowhome(true);
                                     },
-                                    className: "mx-3 bg-red-800 p-2 rounded-lg shadow-md  ",
+                                    className: "mx-0.5 md:mx-3 bg-red-800 p-1 md:p-2 rounded-lg shadow-md hover:bg-red-400  ",
                                     children: "GPT Search"
                                 }, void 0, false, {
                                     fileName: "src/Components/Header.js",
@@ -52299,7 +52305,7 @@ const Header = ()=>{
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                            className: "mx-3 bg-red-800 p-2 rounded-lg shadow-md",
+                            className: " mx-0.5 md:mx-3 bg-red-800 p-1 md:p-2 rounded-lg shadow-md hover:bg-red-400",
                             onClick: ()=>{
                                 dispatch((0, _resultSlice.clearResult)());
                                 dispatch((0, _completedataSlice.removeResultInfo)());
@@ -56402,7 +56408,7 @@ const Recipe = ()=>{
         className: "bg-black text-white min-h-screen py-20 px-6",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                className: "text-3xl font-bold text-center",
+                className: "text-xl md:text-3xl font-bold text-center",
                 children: recipedata?.meals[0]?.strMeal
             }, void 0, false, {
                 fileName: "src/Components/Recipe.js",
@@ -56410,10 +56416,10 @@ const Recipe = ()=>{
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: " p-6  ",
+                className: " md:p-6  ",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "flex justify-center",
+                        className: "flex md:justify-center ",
                         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("iframe", {
                             width: "560",
                             height: "315",
@@ -56433,10 +56439,10 @@ const Recipe = ()=>{
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "w-full m-4 bg-gray-900 p-6 rounded-xl border border-white",
+                        className: "w-full m-1 md:m-4 bg-gray-900 p-6 rounded-xl border border-white",
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                                className: "text-2xl font-semibold mb-4",
+                                className: " text-md md:text-2xl font-semibold mb-4 underline",
                                 children: "Instructions"
                             }, void 0, false, {
                                 fileName: "src/Components/Recipe.js",
@@ -56461,7 +56467,7 @@ const Recipe = ()=>{
                         className: "mt-12 bg-gray-900 p-6 rounded-xl border border-white max-w-3xl mx-auto",
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                                className: "text-3xl font-semibold mb-4 text-center",
+                                className: "text-md md:text-3xl font-semibold mb-4 text-center underline",
                                 children: "Ingredients"
                             }, void 0, false, {
                                 fileName: "src/Components/Recipe.js",
@@ -56641,7 +56647,7 @@ const GptSearchBar = ()=>{
         });
     };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: " absolute z-30 border border-black bg-black text-black w-1/2 ml-72 mt-28 p-2 ",
+        className: " absolute z-30 border border-black bg-black text-black w-full md:w-1/2 md:ml-72 mt-28 p-2 ",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("form", {
             onSubmit: (e)=>{
                 e.preventDefault();
@@ -60818,10 +60824,10 @@ const GptSuggestions = ()=>{
     const data = resultinfo?.flat();
     if (resultinfo?.length == 0) return;
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "absolute z-30 mt-[15%] left-1/3 transform -translate-x-1/3 border border-white bg-black rounded-md p-4",
+        className: "absolute z-30 mt-[45%] md:mt-[15%] md:left-1/3 md:transform md:-translate-x-1/3 border border-white bg-black rounded-lg md:p-4 opacity-80",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                className: "text-white text-3xl mb-4 pl-4",
+                className: "text-white text-xl pl-2 py-1 md:text-3xl md:mb-4 md:pl-4 font-bold md:text-center",
                 children: "Suggestions"
             }, void 0, false, {
                 fileName: "src/Components/GptSuggestions.js",
@@ -60829,7 +60835,7 @@ const GptSuggestions = ()=>{
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "text-white flex flex-wrap justify-center gap-4",
+                className: "text-white p-2 md:p-0 flex flex-wrap md:justify-center md:gap-4",
                 children: data?.map((dish, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardListDefault.default), {
                         card: dish
                     }, index, false, {
@@ -60883,7 +60889,7 @@ const CardList = (props)=>{
         children: [
             " ",
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "w-48 m-2 border border-black rounded-2xl shadow-2xl hover:scale-120 ",
+                className: "w-44 m-1 border border-black rounded-2xl shadow-2xl hover:scale-120 ",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                         className: "rounded-2xl opacity-100",
@@ -60933,42 +60939,15 @@ var _resultSlice = require("../utils/resultSlice");
 var _resultSliceDefault = parcelHelpers.interopDefault(_resultSlice);
 var _completedataSlice = require("../utils/completedataSlice");
 var _completedataSliceDefault = parcelHelpers.interopDefault(_completedataSlice);
-var _userInfoSlice = require("../utils/userInfoSlice");
-var _userInfoSliceDefault = parcelHelpers.interopDefault(_userInfoSlice);
 const appStore = (0, _toolkit.configureStore)({
     reducer: {
         Result: (0, _resultSliceDefault.default),
-        CompleteData: (0, _completedataSliceDefault.default),
-        UserInfo: (0, _userInfoSliceDefault.default)
+        CompleteData: (0, _completedataSliceDefault.default)
     }
 });
 exports.default = appStore;
 
-},{"@reduxjs/toolkit":"fKS5f","../utils/resultSlice":"h0aIh","../utils/completedataSlice":"kwBAJ","../utils/userInfoSlice":"dcOHc","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"dcOHc":[function(require,module,exports,__globalThis) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "userInfoSlice", ()=>userInfoSlice);
-parcelHelpers.export(exports, "addUserInfo", ()=>addUserInfo);
-var _toolkit = require("@reduxjs/toolkit");
-const userInfoSlice = (0, _toolkit.createSlice)({
-    name: "UserInfo",
-    initialState: {
-        userdata: {
-            name: "",
-            email: "",
-            password: ""
-        }
-    },
-    reducers: {
-        addUserInfo: (state, action)=>{
-            state.userdata = action.payload;
-        }
-    }
-});
-const { addUserInfo } = userInfoSlice.actions;
-exports.default = userInfoSlice.reducer;
-
-},{"@reduxjs/toolkit":"fKS5f","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"hP4zv":[function(require,module,exports,__globalThis) {
+},{"@reduxjs/toolkit":"fKS5f","../utils/resultSlice":"h0aIh","../utils/completedataSlice":"kwBAJ","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"hP4zv":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$9cad = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 $parcel$ReactRefreshHelpers$9cad.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
@@ -60981,9 +60960,9 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 const VideoBackground = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "w-full",
+        className: "w-full pt-8",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("iframe", {
-            className: "h-screen w-full",
+            className: "md:h-screen w-full",
             src: "https://www.youtube.com/embed/uygb9O-MDPw?si=0HoyK244XgrEdyus&controls=0&autoplay=1&mute=1",
             title: "YouTube video player",
             allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share",
@@ -61058,7 +61037,7 @@ const CardContainer = ()=>{
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                        className: "text-3xl p-4 font-bold",
+                        className: " text-xl md:text-3xl p-4 font-bold",
                         children: "Indian"
                     }, void 0, false, {
                         fileName: "src/Components/CardContainer.js",
@@ -61095,7 +61074,7 @@ const CardContainer = ()=>{
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                        className: "text-3xl p-4 font-bold",
+                        className: " text-xl md:text-3xl p-4 font-bold",
                         children: "Canadian"
                     }, void 0, false, {
                         fileName: "src/Components/CardContainer.js",
@@ -61132,7 +61111,7 @@ const CardContainer = ()=>{
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                        className: "text-3xl p-4 font-bold",
+                        className: "text-xl md:text-3xl p-4 font-bold",
                         children: "Chinese"
                     }, void 0, false, {
                         fileName: "src/Components/CardContainer.js",
@@ -61169,7 +61148,7 @@ const CardContainer = ()=>{
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                        className: "text-3xl p-4 font-bold",
+                        className: "text-xl md:text-3xl p-4 font-bold",
                         children: "Italian"
                     }, void 0, false, {
                         fileName: "src/Components/CardContainer.js",
@@ -61206,7 +61185,7 @@ const CardContainer = ()=>{
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                        className: "text-3xl p-4 font-bold",
+                        className: "text-xl md:text-3xl p-4 font-bold",
                         children: "American"
                     }, void 0, false, {
                         fileName: "src/Components/CardContainer.js",
