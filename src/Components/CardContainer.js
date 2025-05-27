@@ -46,7 +46,7 @@ const CardContainer = () => {
   return (
     <div className=" bg-black opacity-85 text-white ">
       <div>
-        <h1 className="text-3xl p-4 font-bold">Indian</h1>
+        <h1 className=" text-xl md:text-3xl p-4 font-bold">Indian</h1>
         <div className="flex overflow-x-scroll ">
           <div className="flex ">
             {indian?.map((card, index) => (
@@ -57,7 +57,7 @@ const CardContainer = () => {
       </div>
 
       <div>
-        <h1 className="text-3xl p-4 font-bold">Canadian</h1>
+        <h1 className=" text-xl md:text-3xl p-4 font-bold">Canadian</h1>
         <div className="flex overflow-x-scroll ">
           <div className="flex">
             {carddata?.map((card, index) => (
@@ -68,7 +68,7 @@ const CardContainer = () => {
       </div>
 
       <div>
-        <h1 className="text-3xl p-4 font-bold">Chinese</h1>
+        <h1 className="text-xl md:text-3xl p-4 font-bold">Chinese</h1>
         <div className="flex overflow-x-scroll ">
           <div className="flex">
             {chinese?.map((card, index) => (
@@ -79,7 +79,7 @@ const CardContainer = () => {
       </div>
 
       <div>
-        <h1 className="text-3xl p-4 font-bold">Italian</h1>
+        <h1 className="text-xl md:text-3xl p-4 font-bold">Italian</h1>
         <div className="flex overflow-x-scroll ">
           <div className="flex">
             {italian?.map((card, index) => (
@@ -89,7 +89,7 @@ const CardContainer = () => {
         </div>
       </div>
       <div>
-        <h1 className="text-3xl p-4 font-bold">American</h1>
+        <h1 className="text-xl md:text-3xl p-4 font-bold">American</h1>
         <div className="flex overflow-x-scroll ">
           <div className="flex">
             {american?.map((card, index) => (

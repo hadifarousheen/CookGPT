@@ -21,10 +21,10 @@ const Header = () => {
       });
   };
   return (
-    <div className="bg-black p-3 text-white  opacity-95 fixed z-40 w-full">
-      <nav className="flex a">
-        <h1 className="text-3xl my-auto font-bold ml-3">CookGPT</h1>
-        <div className="ml-auto my-auto text-2xl mx-2 ">
+    <div className="bg-black p-1.5 md:p-3 text-white  opacity-95 fixed z-40 w-full">
+      <nav className="flex  ">
+        <h1 className=" text-xl md:text-3xl my-auto font-bold md:ml-3">CookGPT</h1>
+        <div className="ml-auto my-auto md:ml-auto  md:text-2xl  md:mx-2 ">
          {
           showhome &&  <Link to="/body">
             <button
@@ -33,7 +33,7 @@ const Header = () => {
                 dispatch(clearResult());
                 dispatch(removeResultInfo());
               }}
-              className="mx-3 bg-red-800 p-2 rounded-lg shadow-md "
+              className=" mx-0.5 md:mx-3 bg-red-800 p-1 md:p-2 rounded-lg shadow-md hover:bg-red-400 "
             >
               Home
             </button>
@@ -46,14 +46,14 @@ const Header = () => {
               onClick={()=>{
                 setshowhome(true);
               }}
-              className="mx-3 bg-red-800 p-2 rounded-lg shadow-md  "
+              className="mx-0.5 md:mx-3 bg-red-800 p-1 md:p-2 rounded-lg shadow-md hover:bg-red-400  "
             >
               GPT Search
             </button>
           </Link>
 
           <button
-            className="mx-3 bg-red-800 p-2 rounded-lg shadow-md"
+            className=" mx-0.5 md:mx-3 bg-red-800 p-1 md:p-2 rounded-lg shadow-md hover:bg-red-400"
             onClick={() => {
               dispatch(clearResult());
               dispatch(removeResultInfo());

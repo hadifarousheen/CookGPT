@@ -33,11 +33,11 @@ const Recipe = () => {
 
   return (
     <div className="bg-black text-white min-h-screen py-20 px-6">
-      <h1 className="text-3xl font-bold text-center">
+      <h1 className="text-xl md:text-3xl font-bold text-center">
         {recipedata?.meals[0]?.strMeal}
       </h1>
-      <div className=" p-6  ">
-        <div className="flex justify-center">
+      <div className=" md:p-6  ">
+        <div className="flex md:justify-center ">
           <iframe
             width="560"
             height="315"
@@ -50,13 +50,13 @@ const Recipe = () => {
             allowFullScreen
           ></iframe>
         </div>
-        <div className="w-full m-4 bg-gray-900 p-6 rounded-xl border border-white">
-          <h2 className="text-2xl font-semibold mb-4">Instructions</h2>
+        <div className="w-full m-1 md:m-4 bg-gray-900 p-6 rounded-xl border border-white">
+          <h2 className=" text-md md:text-2xl font-semibold mb-4 underline">Instructions</h2>
           <p className="leading-7">{recipedata?.meals[0]?.strInstructions}</p>
         </div>
 
         <div className="mt-12 bg-gray-900 p-6 rounded-xl border border-white max-w-3xl mx-auto">
-          <h2 className="text-3xl font-semibold mb-4 text-center">
+          <h2 className="text-md md:text-3xl font-semibold mb-4 text-center underline">
             Ingredients
           </h2>
           <ul className="grid grid-cols-2 sm:grid-cols-3 gap-2 list-disc pl-5">
