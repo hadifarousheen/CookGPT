@@ -6,7 +6,6 @@ export const appStore = configureStore({
   reducer: {
     Result: Resultreducer,
     CompleteData: InfoReducer,
-
   },
 });
 

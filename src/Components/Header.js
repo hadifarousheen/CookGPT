@@ -10,14 +10,13 @@ const Header = () => {
   const auth = getAuth();
   const dispatch = useDispatch();
   const[showhome,setshowhome]=useState(false);
+  const[showgptsearch,setshowgptsearch]=useState(true);
   const handlesignout = () => {
     signOut(auth)
       .then(() => {
         navigate("/");
-       
       })
       .catch((error) => {
-        
       });
   };
   return (
@@ -26,10 +25,12 @@ const Header = () => {
         <h1 className=" text-xl md:text-3xl my-auto font-bold md:ml-3">CookGPT</h1>
         <div className="ml-auto my-auto md:ml-auto  md:text-2xl  md:mx-2 ">
          {
-          showhome &&  <Link to="/body">
+          showhome &&
+          <Link to="/body">
             <button
               onClick={() => {
-                setshowhome(false);
+              setshowgptsearch(!showgptsearch);
+              setshowhome(!showhome)
                 dispatch(clearResult());
                 dispatch(removeResultInfo());
               }}
@@ -39,19 +40,20 @@ const Header = () => {
             </button>
           </Link>
          }
-
+{
+  showgptsearch &&
           <Link to="gptsearch">
-            {" "}
             <button
               onClick={()=>{
-                setshowhome(true);
+        setshowgptsearch(!showgptsearch);
+              setshowhome(!showhome)
               }}
               className="mx-0.5 md:mx-3 bg-red-800 p-1 md:p-2 rounded-lg shadow-md hover:bg-red-400  "
             >
               GPT Search
             </button>
           </Link>
-
+}
           <button
             className=" mx-0.5 md:mx-3 bg-red-800 p-1 md:p-2 rounded-lg shadow-md hover:bg-red-400"
             onClick={() => {

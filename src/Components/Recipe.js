@@ -24,7 +24,7 @@ const Recipe = () => {
           key.includes("strIngredient") && value && value.trim() !== ""
       )
       .map(([key, value]) => value);
-   
+
     setingred(inglist);
   };
   useEffect(() => {
@@ -51,10 +51,11 @@ const Recipe = () => {
           ></iframe>
         </div>
         <div className="w-full m-1 md:m-4 bg-gray-900 p-6 rounded-xl border border-white">
-          <h2 className=" text-md md:text-2xl font-semibold mb-4 underline">Instructions</h2>
+          <h2 className=" text-md md:text-2xl font-semibold mb-4 underline">
+            Instructions
+          </h2>
           <p className="leading-7">{recipedata?.meals[0]?.strInstructions}</p>
         </div>
-
         <div className="mt-12 bg-gray-900 p-6 rounded-xl border border-white max-w-3xl mx-auto">
           <h2 className="text-md md:text-3xl font-semibold mb-4 text-center underline">
             Ingredients

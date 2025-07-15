@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Groq from "groq-sdk";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { addResult, clearResult } from "../utils/resultSlice";
 import { addResultInfo, removeResultInfo } from "../utils/completedataSlice";
 
@@ -19,13 +19,10 @@ const GptSearchBar = () => {
     const json = await data.json();
 
     if (!json.meals) {
-    
       return;
     }
-
     return json.meals;
   };
-
   const handleclick = async () => {
     dispatch(clearResult());
     dispatch(removeResultInfo())
@@ -74,7 +71,6 @@ const GptSearchBar = () => {
           value={text}
           onChange={(e) => {
             settext(e.target.value);
-        
           }}
         />
         <button

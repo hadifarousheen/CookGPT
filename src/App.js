@@ -13,7 +13,6 @@ const App = () => {
   return (
     <Routes>
       <Route path="/" element={<Login />} />
-
       <Route path="/body" element={<Body />}>
         <Route
           index
@@ -25,7 +24,6 @@ const App = () => {
           }
         />
         <Route path="gptsearch/recipe/:id" element={<Recipe />} />
-
         <Route path="recipe/:id" element={<Recipe />} />
         <Route path="gptsearch" element={<GptSearch />} />
         <Route path="body/gptsearch" element={<GptSearch />} />

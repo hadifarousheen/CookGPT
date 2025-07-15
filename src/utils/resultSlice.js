@@ -18,5 +18,4 @@ export const resultSlice = createSlice({
 });
 
 export const { addResult, clearResult } = resultSlice.actions;
-
 export default resultSlice.reducer;

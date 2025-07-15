@@ -11,7 +11,6 @@ const GptSearch = () => {
             alt="food-image"
           />
         </div>
-
         <GptSearchBar />
         <GptSuggestions />
       </div>

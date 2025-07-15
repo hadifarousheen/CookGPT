@@ -5,11 +5,9 @@ import {
 } from "firebase/auth";
 import { auth } from "../utils/firebase";
 import { useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
 
 const Login = () => {
   const [signin, setsignin] = useState(true);
-  const dispatch = useDispatch();
   const navigate = useNavigate();
   const [errormessage, seterrorMessage] = useState("");
   const email = useRef(null);
@@ -23,8 +21,6 @@ const Login = () => {
         password.current.value
       )
         .then((userCredential) => {
-          const user = userCredential;
-
           navigate("/body");
         })
         .catch((error) => {
@@ -37,8 +33,6 @@ const Login = () => {
         password.current.value
       )
         .then((userCredential) => {
-          const user = userCredential.user;
-
           navigate("/body");
         })
         .catch((error) => {
