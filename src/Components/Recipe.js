@@ -14,9 +14,11 @@ const Recipe = () => {
     const json = await data.json();
     setrecipedata(json);
     const url = json.meals[0].strYoutube;
-    const params = new URLSearchParams(new URL(url)?.search);
+    if(url){
+    const params = new URLSearchParams(new URL(url).search);
     const videoId = params.get("v");
     setyturl(videoId);
+    }
     const meal = json?.meals?.[0];
     const inglist = Object.entries(meal)
       .filter(
